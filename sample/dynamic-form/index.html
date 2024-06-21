@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multi-Step Form</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Form</h1>
+        <form id="dynamicStepForm">
+            <div class="step active" id="step1">
+                <label for="choice1">Choose an option:</label>
+                <select id="choice1" name="choice1">
+                    <option value="">Select...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+            
+            <div class="step" id="step2">
+                <label for="choice2">Choose an option based on previous selection:</label>
+                <select id="choice2" name="choice2">
+                    <!-- Options will be dynamically added here -->
+                </select>
+            </div>
+
+            <div class="step" id="step3">
+                <label for="finalInput">Final Input:</label>
+                <input type="text" id="finalInput" name="finalInput">
+            </div>
+            
+            <div class="buttons">
+                <button type="button" id="backButton" style="display:none;">Back</button>
+                <button type="button" id="nextButton">Next</button>
+                <button type="submit" id="submitButton" style="display:none;">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
